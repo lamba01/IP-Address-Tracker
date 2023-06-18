@@ -1,5 +1,9 @@
 
 
+function displaydefaultlocations() {
+
+
+
 // API key from https://geo.ipify.org
 const apiKey = 'at_ACAZL6otukqccjfgRJCHOKwLz1huZ';
 
@@ -58,6 +62,37 @@ fetchIPDetails()
   .catch(error => {
     console.log('Error:', error);
   });
+}
+
+
+// Function to search for a specific IP address and update the map and details
+function searchLocation() {
+  // Display IP address
+  document.getElementById('ip-address').innerHTML = document.getElementById('ip-input').value;
+  const ipAddress = document.getElementById('ip-input').value;
+
+  fetchIPDetails(ipAddress)
+    .then(details => {
+      const { lat, lng, isp, location, timezone } = details;
+
+      // Update the map
+      const map = createMap(lat, lng);
+      L.marker([lat, lng]).addTo(map)
+        .bindPopup(`Location: ${location}`)
+        .openPopup();
+
+      // Update the details
+      document.getElementById('location').innerHTML = location;
+      document.getElementById('isp').innerHTML = isp;
+      document.getElementById('timezone').innerHTML = timezone;
+    })
+    .catch(error => {
+      console.log('Error:', error);
+    });
+}
+
+// Display user's IP address and location by default
+displaydefaultlocations();
 
 
 

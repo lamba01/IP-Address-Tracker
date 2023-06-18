@@ -33,6 +33,7 @@ body {
 }
 .ip input:focus {
   outline: none;
+  color: black;
 }
 .arrow {
   background-color: hsl(0, 0%, 17%);
