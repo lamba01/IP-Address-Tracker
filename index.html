@@ -2,13 +2,36 @@
 <html>
 <head>
   <title>Location Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Location Tracker</h1>
-  <div id="map"></div>
-  <div id="ip-address"></div>
+  <div class="ip">
+    <h1>IP Address Tracker</h1>
+   <div class="input"><input type="text" placeholder="Search for any IP address or domain">
+    <div class="arrow"><img src="/images/icon-arrow.svg" alt=""></div></div>
+    <div class="container">
+        <div class="adress">
+            <span>ip address</span>
+            <div id="ip-address" class="calls"></div>
+        </div>
+        <div class="location">
+            <span>location</span>
+            <div id="location" class="calls"></div>
+        </div>
+        <div class="timezone">
+            <span>timezone</span>
+            <div id="timezone" class="calls"></div>
+        </div>
+        <div class="isp">
+            <span>isp</span>
+            <div id="isp" class="calls"></div>
+        </div>
+    </div>
+  </div>
+  <div id="map" class="map"></div>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" async></script>
   <script src="/script.js"></script>
 </body>
