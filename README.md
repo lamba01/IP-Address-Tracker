@@ -7,6 +7,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -28,7 +29,9 @@ Users should be able to:
 - See their own IP address on the map on the initial page load
 - Search for any IP addresses and see the key information and location
 
+### Screenshot
 
+![](./screenshot.jpg)
 
 
 ### Links
